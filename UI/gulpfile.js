@@ -59,6 +59,7 @@ var browserSync = require('browser-sync'),
     // config values that will be written to the UI and can
     // be overwritten by arguments during the build process.
     // if left null, they will not be written to the file
+    // 'http://localhost:8080'
     config = {
         module: 'hygieia-dashboard',
         local: null,
@@ -100,7 +101,7 @@ function server(ghostMode) {
       /*
        * Location of your backend (API) server--default port 8080
        */
-      var proxyTarget = config.api || 'http://localhost:8080';
+      var proxyTarget = config.api || 'http://10.180.120.13:8166';
 
       var proxy = httpProxy.createProxyServer({
           target: proxyTarget

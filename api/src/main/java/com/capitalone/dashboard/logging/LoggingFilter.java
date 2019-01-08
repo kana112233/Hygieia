@@ -124,7 +124,7 @@ public class LoggingFilter implements Filter {
                     if (incomingURLs.contains(clientOrigin)) {
                         //adds headers to response to allow CORS
                         httpServletResponse.addHeader("Access-Control-Allow-Origin", clientOrigin);
-                        httpServletResponse.addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+                        httpServletResponse.addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
                         httpServletResponse.addHeader("Access-Control-Allow-Headers", "Content-Type");
                         httpServletResponse.addHeader("Access-Control-Max-Age", "1");
                     }
